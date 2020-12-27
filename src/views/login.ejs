@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        <link href="css/styles.css" rel="stylesheet">
+        
+  <style>
+             
+    body{
+        background-size:100%;
+    }
+.forms {
+    background-color: rgb(202, 147, 27);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 330px;
+    height: 24em;
+    max-width: 100%;
+    margin-left:10%;
+}
+.login{
+  float: right;
+  color:rgb(133, 160, 127);
+  border: 2px solid rgb(8, 10, 94);
+  background: rgb(80, 8, 56);
+  height: 20em;
+  margin-top: 10%;
+  margin-right:10%;
+  margin-left:50%;
+  padding: 30px;
+}
+#emailId{
+  color: rgb(172, 27, 27);
+}
+#password{
+  color: rgb(182, 35, 35);
+}
+#btn{
+    border: 2px solid rgb(9, 163, 6);
+    background: rgb(3, 73, 46);
+    color: rgb(207, 189, 189);
+    width: 100px;
+}
+</style>
+
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+          <% for(i=2;i<nav.length;i++){%>
+        <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+        <%}%>
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+            </form>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Login
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+          
+          
+          
+          <!--/stories-->
+          
+          <div class="row"> 
+               
+            <div class="forms">
+                <form method= "POST" action="/login" class="login" onsubmit="return validation()">
+                    <div class="">
+                      <label>Username:</label><br>
+                      <input type="text" name="email" id="email" placeholder=" username or email"><br>
+                      <span id="emailId"></span><br>
+                  </div><br>
+                  <div class="">
+                    <label>Password:</label><br>
+                    <input type="password" name="password" id="pass" placeholder="enter your password"><br>
+                    <span id="password"></span>
+                </div><br><br>
+                 <button id="btn"type="submit">Login</button>
+            </form>
+          </div>
+          
+          <hr>
+          
+                    <!--/stories-->
+          
+          
+          
+        
+          
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- script references -->
+
+  <script>
+
+        function validation(){
+               var mail = document.getElementById('email').value;
+               var password = document.getElementById('pass').value;
+               
+                if(mail == ""){
+                document.getElementById('emailId').innerHTML = " * Enter your username *";
+                return false;
+               }
+
+               if(mail.length<5){
+                document.getElementById('emailId').innerHTML = " * invalid username *";
+                return false;
+               }
+               else{
+                document.getElementById('emailId').innerHTML = " ";
+               }
+              
+               if(password == ""){
+                document.getElementById('password').innerHTML = " * Enter your password *";
+                return false;
+               }
+
+               if(password.length<5){
+                document.getElementById('password').innerHTML = " * Invalid Password *";
+                return false;
+               }
+               else
+               {
+                document.getElementById('password').innerHTML = " ";
+               }
+              }
+
+
+  </script>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
